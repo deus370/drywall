@@ -1,0 +1,249 @@
+<mat-toolbar class="navbar" *ngIf="!isSmallScreen">
+  <!-- Contenido para pantallas grandes o menú de hamburguesa abierto -->
+  <a class="button-navbar text" href="#">PALMEC-DRYWALL</a>
+  <span class="spacer"></span>
+  <button class="button-navbar">
+    <a class="button-navbar text" href="#">HOME</a>
+  </button>
+  <span class="text">|</span>
+  <button class="button-navbar">
+    <a class="button-navbar text" href="#services">SERVICES</a>
+  </button>
+  <span class="text">|</span>
+  <button class="button-navbar">
+    <a class="button-navbar text" href="#galery">GALERY</a>
+  </button>
+</mat-toolbar>
+
+<mat-toolbar class="navbar" *ngIf="isMenuOpen && isSmallScreen">
+  <!-- Contenido para pantallas grandes o menú de hamburguesa abierto -->
+
+  <button class="button-navbar">
+    <button class="button-navbar">
+      <a class="button-navbar text" href="#">HOME</a>
+    </button>
+  </button>
+  <button class="button-navbar">
+    <a class="button-navbar text" href="#services">SERVICES</a>
+  </button>
+  <button class="button-navbar">
+    <a class="button-navbar text" href="#galery">GALERY</a>
+  </button>
+  <button class="button-navbar" (click)="toggleMenu()">X</button>
+</mat-toolbar>
+
+<mat-toolbar class="navbar" *ngIf="isSmallScreen && !isMenuOpen">
+  <!-- Contenido para pantallas pequeñas (menú de hamburguesa cerrado) -->
+  <span class="text">PALMEC-DRYWALL</span>
+  <span class="spacer"></span>
+  <button class="button-navbar" (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+
+<section>
+  <div class="waveWrapper waveAnimation">
+    <div class="waveWrapperInner bgTop">
+      <div
+        class="wave waveTop"
+        style="
+          background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png');
+        "
+      ></div>
+    </div>
+    <div class="waveWrapperInner bgMiddle">
+      <div
+        class="wave waveMiddle"
+        style="
+          background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png');
+        "
+      ></div>
+    </div>
+    <div class="waveWrapperInner bgBottom">
+      <div
+        class="wave waveBottom"
+        style="
+          background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png');
+        "
+      ></div>
+    </div>
+    <div class="row">
+      <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 logo-container">
+        <img
+          src="assets\LogoVariante1\LogoVariante1500x500.png"
+          alt="Logo"
+          style="width: 100%; height: 100%"
+        />
+      </div>
+      <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 company">
+        <!-- Aquí coloca el nombre de tu compañía -->
+        <div>
+          <h1 class="home-tittle">PALMEC DRYWALL, LLC</h1>
+        </div>
+        <h4 class="home-subtitle mt-5">24 YEARS EXPERIENCE</h4>
+        <ul class="home-list">
+          <li class="list-item">Hang Metal Studs and Tops</li>
+          <li class="list-item">Basements and Water Damage</li>
+          <li class="list-item">Renew Antique Walls and Cellings</li>
+          <li class="list-item">Service Residential and Commercial</li>
+        </ul>
+        <div class="row home-info">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            Contact: 614-714-8221
+          </div>
+          <div
+            class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-end"
+          >
+            <i class="bi bi-geo-alt" style="color: black"></i> COLUMBUS OHIO
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<header></header>
+
+<section id="services">
+  <div class="container">
+    <h2>Services</h2>
+
+    <p class="lead">GENERAL DRYWALL SERVICES RESIDENTIAL - COMMERCIAL</p>
+    <p><i class="bi bi-droplet" style="color: #487722"></i> Water Damage Fix</p>
+    <p>
+      <i class="bi bi-hammer" style="color: #487722"></i> Antique Houses
+      Renovation Walls and Cielings
+    </p>
+    <p>
+      <i class="bi bi-paint-bucket" style="color: #487722"></i> Paint Solution
+      New and Existing Projects
+    </p>
+    <p>
+      <i class="bi bi-house-down" style="color: #487722"></i> Specialist in
+      Finished Bassements
+    </p>
+    <p>
+      <i class="bi bi-house-door" style="color: #487722"></i> General Interior
+      Renovations Poors, Trim, Base
+    </p>
+    <p>
+      <i class="bi bi-tools" style="color: #487722"></i> Metal Stud Profesional
+      Hang and Finish
+    </p>
+    <p>Complicated Prerock Welcome!</p>
+    <p><i class="bi bi-geo-alt"></i> In the Columbus Ohio Area</p>
+    <p class="lead">FREE ESTIMATES</p>
+  </div>
+</section>
+
+<section id="galery">
+  <h2>GALERY</h2>
+  <hr />
+  <div class="container">
+    <div class="portfolio__projects">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <figure>
+            <figcaption>
+              <h3>DRYWALL HUNG</h3>
+              <p>Installation of the Drywall Sheets</p>
+              <p>
+                Planning involves deciding where to place seams and joints for a
+                seamless finish.
+              </p>
+              <a href="#"
+                ><i class="fa fa-search-plus" aria-hidden="true"></i
+              ></a>
+            </figcaption>
+            <img src="assets/works/hung.jpeg" style="height: 350px" />
+          </figure>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <figure>
+            <figcaption>
+              <h3>DRYWALL HUNG</h3>
+              <p>
+                Special care is taken to ensure that the sheets are level and
+                properly aligned.
+              </p>
+              <a href="#"
+                ><i class="fa fa-search-plus" aria-hidden="true"></i
+              ></a>
+            </figcaption>
+            <img src="assets/works/hungfinish.jpeg" style="height: 350px" />
+          </figure>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <figure>
+            <figcaption>
+              <h3 style="text-transform: uppercase">remodeling stairs</h3>
+              <!-- <p>Coming Soon</p> -->
+              <a href="#"
+                ><i class="fa fa-search-plus" aria-hidden="true"></i
+              ></a>
+            </figcaption>
+            <img src="assets/works/remodelation.jpeg" style="height: 350px" />
+          </figure>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <figure>
+            <figcaption>
+              <h3 style="text-transform: uppercase">remodeling stairs</h3>
+              <!-- <p>Coming Soon</p> -->
+              <a href="#"
+                ><i class="fa fa-search-plus" aria-hidden="true"></i
+              ></a>
+            </figcaption>
+            <img
+              src="assets/works/remodelationfinsh.jpeg"
+              style="height: 350px"
+            />
+          </figure>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <figure>
+            <figcaption>
+              <h3 style="text-transform: uppercase">fireplace remodel</h3>
+              <!-- <p>Coming Soon</p> -->
+              <a href="#"
+                ><i class="fa fa-search-plus" aria-hidden="true"></i
+              ></a>
+            </figcaption>
+            <img src="assets/works/fireplace.jpeg" style="height: 350px" />
+          </figure>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <figure>
+            <figcaption>
+              <h3 style="text-transform: uppercase">fireplace remodel</h3>
+              <!-- <p>Coming Soon</p> -->
+              <a href="#"
+                ><i class="fa fa-search-plus" aria-hidden="true"></i
+              ></a>
+            </figcaption>
+            <img
+              src="assets/works/fireplacefinish.jpeg"
+              style="height: 350px"
+            />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="whatsapp-button">
+    <a
+      href="https://wa.me/+5214773549863"
+      target="_blank"
+      style="font-size: 40px"
+    >
+      <i class="bi bi-whatsapp" style="color: white"></i>
+    </a>
+  </div>
+</section>
+
+<section id="footer">
+  <p>
+    Made with <i class="fa fa-heart" aria-hidden="true"></i> by Luis Eduardo And
+    Hector Ramirez <i class="fa fa-copyright" aria-hidden="true"></i>2024
+  </p>
+</section>

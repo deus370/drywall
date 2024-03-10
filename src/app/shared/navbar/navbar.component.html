@@ -1,0 +1,57 @@
+<!-- 
+<mat-toolbar class="navbar">
+  <span class="text">PALMEC-DRYWALL</span>
+  <span class="spacer"></span>
+  <button class="button-navbar">
+    <span class="text">HOME</span>
+  </button>
+  <span class="text">|</span>
+  <button class="button-navbar">
+    <span class="text">ABOUT</span>
+  </button>
+  <span class="text">|</span>
+  <button class="button-navbar">
+    <span class="text">SERVICES</span>
+  </button>
+</mat-toolbar> -->
+
+<mat-toolbar class="navbar" *ngIf="!isSmallScreen">
+  <!-- Contenido para pantallas grandes o menú de hamburguesa abierto -->
+  <span class="text">PALMEC-DRYWALL</span>
+  <span class="spacer"></span>
+  <button class="button-navbar">
+    <span class="text">HOME</span>
+  </button>
+  <span class="text">|</span>
+  <button class="button-navbar">
+    <span class="text">ABOUT</span>
+  </button>
+  <span class="text">|</span>
+  <button class="button-navbar">
+    <span class="text">SERVICES</span>
+  </button>
+</mat-toolbar>
+
+<mat-toolbar class="navbar" *ngIf="isMenuOpen && isSmallScreen">
+  <!-- Contenido para pantallas grandes o menú de hamburguesa abierto -->
+
+  <button class="button-navbar">
+    <span class="text">HOME</span>
+  </button>
+  <button class="button-navbar">
+    <span class="text">ABOUT</span>
+  </button>
+  <button class="button-navbar">
+    <span class="text">SERVICES</span>
+  </button>
+  <button class="button-navbar" (click)="toggleMenu()">X</button>
+</mat-toolbar>
+
+<mat-toolbar class="navbar" *ngIf="isSmallScreen && !isMenuOpen">
+  <!-- Contenido para pantallas pequeñas (menú de hamburguesa cerrado) -->
+  <span class="text">PALMEC-DRYWALL</span>
+  <span class="spacer"></span>
+  <button class="button-navbar" (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
